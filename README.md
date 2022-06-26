@@ -1,4 +1,4 @@
-## Genshin Build [Deprecated]
+## [Genshin Build](http://genshimpact.ga) [Deprecated]
 
 Um projeto pessoal fullstack que iniciei em 2020, onde desenvolvi toda lógica Front-End e Back-End usando Javascript para interação no lado do cliente, PHP como linguagem de servidor e MYSQL para banco de dados.
 
