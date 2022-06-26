@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 08-Jun-2021 às 02:19
--- Versão do servidor: 8.0.18
--- versão do PHP: 7.4.0
+-- Tempo de geração: 26-Jun-2022 às 14:50
+-- Versão do servidor: 5.7.36
+-- versão do PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -39,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `armas` (
   `atributo_2_valor` varchar(10) NOT NULL,
   `star` varchar(6) NOT NULL,
   `nivel` varchar(3) NOT NULL,
-  `titulo_habilidade` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `titulo_habilidade` varchar(30) NOT NULL,
   `refina_1` text NOT NULL,
   `refina_2` text NOT NULL,
   `refina_3` text NOT NULL,
@@ -86,9 +85,9 @@ CREATE TABLE IF NOT EXISTS `attributes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `attribute` varchar(50) NOT NULL,
   `%` varchar(2) NOT NULL,
-  `3` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `4` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `5` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `3` varchar(20) NOT NULL,
+  `4` varchar(20) NOT NULL,
+  `5` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
@@ -154,93 +153,93 @@ DROP TABLE IF EXISTS `builds`;
 CREATE TABLE IF NOT EXISTS `builds` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(30) NOT NULL,
-  `arma_1` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `arma_1` varchar(50) NOT NULL,
   `a1_refina` varchar(11) NOT NULL,
   `arma_2` varchar(50) NOT NULL,
   `a2_refina` varchar(11) NOT NULL,
   `arma_3` varchar(50) NOT NULL,
   `a3_refina` varchar(11) NOT NULL,
-  `row1_flor` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_flor_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_flor_subattr1` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_flor_subattr2` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_flor_subattr3` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_flor_subattr4` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_flor_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_pena` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_pena_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `row1_flor` varchar(50) NOT NULL,
+  `row1_flor_attr` varchar(30) NOT NULL,
+  `row1_flor_subattr1` varchar(50) NOT NULL,
+  `row1_flor_subattr2` varchar(50) NOT NULL,
+  `row1_flor_subattr3` varchar(50) NOT NULL,
+  `row1_flor_subattr4` varchar(50) NOT NULL,
+  `row1_flor_star` varchar(3) NOT NULL,
+  `row1_pena` varchar(50) NOT NULL,
+  `row1_pena_attr` varchar(30) NOT NULL,
   `row1_pena_subattr1` varchar(50) NOT NULL,
   `row1_pena_subattr2` varchar(50) NOT NULL,
   `row1_pena_subattr3` varchar(50) NOT NULL,
   `row1_pena_subattr4` varchar(50) NOT NULL,
-  `row1_pena_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_ampulheta` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_ampulheta_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `row1_pena_star` varchar(3) NOT NULL,
+  `row1_ampulheta` varchar(50) NOT NULL,
+  `row1_ampulheta_attr` varchar(30) NOT NULL,
   `row1_ampulheta_subattr1` varchar(50) NOT NULL,
   `row1_ampulheta_subattr2` varchar(50) NOT NULL,
   `row1_ampulheta_subattr3` varchar(50) NOT NULL,
   `row1_ampulheta_subattr4` varchar(50) NOT NULL,
-  `row1_ampulheta_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_taça` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_taça_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `row1_ampulheta_star` varchar(3) NOT NULL,
+  `row1_taça` varchar(50) NOT NULL,
+  `row1_taça_attr` varchar(30) NOT NULL,
   `row1_taça_subattr1` varchar(50) NOT NULL,
   `row1_taça_subattr2` varchar(50) NOT NULL,
   `row1_taça_subattr3` varchar(50) NOT NULL,
   `row1_taça_subattr4` varchar(50) NOT NULL,
-  `row1_taça_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_coroa` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_coroa_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `row1_taça_star` varchar(3) NOT NULL,
+  `row1_coroa` varchar(50) NOT NULL,
+  `row1_coroa_attr` varchar(30) NOT NULL,
   `row1_coroa_subattr1` varchar(50) NOT NULL,
   `row1_coroa_subattr2` varchar(50) NOT NULL,
   `row1_coroa_subattr3` varchar(50) NOT NULL,
   `row1_coroa_subattr4` varchar(50) NOT NULL,
-  `row1_coroa_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_c1` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_c1_2peças` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row1_c1_4peças` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `row1_coroa_star` varchar(3) NOT NULL,
+  `row1_c1` varchar(50) NOT NULL,
+  `row1_c1_2peças` text NOT NULL,
+  `row1_c1_4peças` text NOT NULL,
   `row1_c2` varchar(50) NOT NULL,
   `row1_c2_2peças` text NOT NULL,
   `row1_c2_4peças` text NOT NULL,
-  `row2_flor` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_flor_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_flor_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_pena` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_pena_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_pena_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_ampulheta` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_ampulheta_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_ampulheta_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_taça` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_taça_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_taça_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_coroa` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_coroa_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row2_coroa_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `row2_flor` varchar(50) NOT NULL,
+  `row2_flor_attr` varchar(30) NOT NULL,
+  `row2_flor_star` varchar(3) NOT NULL,
+  `row2_pena` varchar(50) NOT NULL,
+  `row2_pena_attr` varchar(30) NOT NULL,
+  `row2_pena_star` varchar(3) NOT NULL,
+  `row2_ampulheta` varchar(50) NOT NULL,
+  `row2_ampulheta_attr` varchar(30) NOT NULL,
+  `row2_ampulheta_star` varchar(3) NOT NULL,
+  `row2_taça` varchar(50) NOT NULL,
+  `row2_taça_attr` varchar(30) NOT NULL,
+  `row2_taça_star` varchar(3) NOT NULL,
+  `row2_coroa` varchar(50) NOT NULL,
+  `row2_coroa_attr` varchar(30) NOT NULL,
+  `row2_coroa_star` varchar(3) NOT NULL,
   `row2_c1` varchar(50) NOT NULL,
   `row2_c1_2peças` text NOT NULL,
   `row2_c1_4peças` text NOT NULL,
   `row2_c2` varchar(50) NOT NULL,
   `row2_c2_2peças` text NOT NULL,
   `row2_c2_4peças` text NOT NULL,
-  `row3_flor` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_flor_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_flor_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_pena` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_pena_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_pena_subattr1` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_pena_subattr2` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_pena_subattr3` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_pena_subattr4` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_pena_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_ampulheta` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_ampulheta_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_ampulheta_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_taça` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_taça_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_taça_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_coroa` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_coroa_attr` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `row3_coroa_star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `row3_flor` varchar(50) NOT NULL,
+  `row3_flor_attr` varchar(30) NOT NULL,
+  `row3_flor_star` varchar(3) NOT NULL,
+  `row3_pena` varchar(50) NOT NULL,
+  `row3_pena_attr` varchar(30) NOT NULL,
+  `row3_pena_subattr1` varchar(50) NOT NULL,
+  `row3_pena_subattr2` varchar(50) NOT NULL,
+  `row3_pena_subattr3` varchar(50) NOT NULL,
+  `row3_pena_subattr4` varchar(50) NOT NULL,
+  `row3_pena_star` varchar(3) NOT NULL,
+  `row3_ampulheta` varchar(50) NOT NULL,
+  `row3_ampulheta_attr` varchar(30) NOT NULL,
+  `row3_ampulheta_star` varchar(3) NOT NULL,
+  `row3_taça` varchar(50) NOT NULL,
+  `row3_taça_attr` varchar(30) NOT NULL,
+  `row3_taça_star` varchar(3) NOT NULL,
+  `row3_coroa` varchar(50) NOT NULL,
+  `row3_coroa_attr` varchar(30) NOT NULL,
+  `row3_coroa_star` varchar(3) NOT NULL,
   `row3_c1` varchar(50) NOT NULL,
   `row3_c1_2peças` text NOT NULL,
   `row3_c1_4peças` text NOT NULL,
@@ -273,9 +272,9 @@ CREATE TABLE IF NOT EXISTS `conjuntos` (
   `ampulheta` varchar(100) NOT NULL,
   `taça` varchar(100) NOT NULL,
   `coroa` varchar(100) NOT NULL,
-  `3star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `4star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `5star` varchar(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `3star` varchar(3) NOT NULL,
+  `4star` varchar(3) NOT NULL,
+  `5star` varchar(3) NOT NULL,
   `1_peças` text NOT NULL,
   `2_peças` text NOT NULL,
   `4_peças` text NOT NULL,
@@ -595,7 +594,7 @@ DROP TABLE IF EXISTS `elementos`;
 CREATE TABLE IF NOT EXISTS `elementos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(10) NOT NULL,
-  `bg_url` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `bg_url` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
@@ -688,7 +687,7 @@ CREATE TABLE IF NOT EXISTS `map_grupos` (
   `grupo` varchar(100) NOT NULL,
   `title` varchar(150) NOT NULL,
   `descrição` text NOT NULL,
-  `is_item` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `is_item` varchar(50) NOT NULL,
   `tipo` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
@@ -740,17 +739,17 @@ DROP TABLE IF EXISTS `map_marcadores`;
 CREATE TABLE IF NOT EXISTS `map_marcadores` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nation` varchar(50) NOT NULL,
-  `grupo` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `grupo` varchar(50) NOT NULL,
   `title` varchar(50) NOT NULL,
   `descrição` text NOT NULL,
-  `nameimg` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `nameimg` varchar(2000) NOT NULL,
   `id_video` varchar(150) NOT NULL,
   `coord` varchar(150) NOT NULL,
   `qtd_item` varchar(50) NOT NULL,
   `tipo` varchar(100) NOT NULL,
   `author` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=170 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=171 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `map_marcadores`
@@ -777,9 +776,8 @@ INSERT INTO `map_marcadores` (`id`, `nation`, `grupo`, `title`, `descrição`, `
 (146, 'all_nations', 'teleporte', '', '', '16187099235dfabbba83e2ed081e3fee0697984a4a.png, 1618709924ca43628ff92f294d2f01e230974bcfe8.png', '', '21.002471, 19.709473', '', 'teleporte_dominios', 'andremalveira'),
 (147, 'all_nations', 'teleporte', '', '', '16187105020c65a7e3c1f2e5be2ca7cef3fdeb4ef2.png, 16187105022b4f6885986dbfd747d2730045a120af.png', '', '17.014768, 20.566406', '', 'teleporte_dominios', 'andremalveira'),
 (148, 'mondstadt', 'hypo_electro', '', '', '1618711144f16b874f37d1b232fd474ec90dd920a1.png', '', '6.599131, 43.066406', '', 'boss', 'andremalveira'),
-(150, 'liyue', 'dragarto_primordial', '', '', '1618889525eccbc87e4b5ce2fe28308fd9f2a7baf3.png', '', '32.175612, 4.042969', '', 'boss', 'andremalveira'),
-(154, 'mondstadt', 'andrius', '', '', '1619550788eccbc87e4b5ce2fe28308fd9f2a7baf3.png', '', '13.325485, 0.175781', '', 'boss', 'andremalveira'),
-(168, 'all_nations', 'templo', 'Caminho da Rebeldia', 'Embora os Ladrões de Tesoura tenham ouvido falar em tesouros escondidos aqui, eles ainda não descobriram sua localização, Neste mundo, quanto mais se apega a ilusões, mais rapidamente deslizam entre os dedos. Somente quando os desejos do coração são finalmente deixados de lados, é possível encontrar o caminho estreito para a paz.', 'https://i.ytimg.com/vi/WifHRkXNQR4/maxresdefault.jpg', '', '-32.971804, -18.742676', '', 'teleporte_dominios', 'andremalveira');
+(168, 'all_nations', 'templo', 'Caminho da Rebeldia', 'Embora os Ladrões de Tesoura tenham ouvido falar em tesouros escondidos aqui, eles ainda não descobriram sua localização, Neste mundo, quanto mais se apega a ilusões, mais rapidamente deslizam entre os dedos. Somente quando os desejos do coração são finalmente deixados de lados, é possível encontrar o caminho estreito para a paz.', 'https://i.ytimg.com/vi/WifHRkXNQR4/maxresdefault.jpg', '', '-32.971804, -18.742676', '', 'teleporte_dominios', 'andremalveira'),
+(170, 'all_nations', 'templo', 'Teste templo', 'Teste templo', '', 'ZNhtRDDwi-E', '0.087891, 18.984375', '', 'teleporte_dominios', 'andremalveira');
 
 -- --------------------------------------------------------
 
@@ -821,7 +819,7 @@ DROP TABLE IF EXISTS `meta`;
 CREATE TABLE IF NOT EXISTS `meta` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(30) NOT NULL,
-  `nomeview` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `nomeview` varchar(60) NOT NULL,
   `text` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
@@ -831,7 +829,7 @@ CREATE TABLE IF NOT EXISTS `meta` (
 --
 
 INSERT INTO `meta` (`id`, `nome`, `nomeview`, `text`) VALUES
-(1, 'Título', '', '| genshimpact.ga'),
+(1, 'title_page', '', '| genshimpact.ga'),
 (2, 'site_name', '', 'Genshin Impact Web'),
 (3, 'type', '', 'game'),
 (4, 'section', '', 'Builds, Guia de Personagens'),
@@ -925,7 +923,7 @@ CREATE TABLE IF NOT EXISTS `personagens` (
   `niver` varchar(6) NOT NULL,
   `afiliação` varchar(50) NOT NULL,
   `constelação` varchar(50) NOT NULL,
-  `comentário` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `comentário` text NOT NULL,
   `habilidade` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
@@ -999,7 +997,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `user`, `senha`, `nome`, `type_user`, `type_user_cod`, `img`) VALUES
-(1, 'andremalveira', 'fbb156e9440da08d87ff179b4a879e78', 'André Malveira', 'Administrador', 0, '143294032_1986671704807073_5192302210026658578_n.jpg');
+(1, 'andremalveira', 'fbb156e9440da08d87ff179b4a879e78', 'André Malveira', 'admin', 0, '143294032_1986671704807073_5192302210026658578_n.jpg');
 
 -- --------------------------------------------------------
 
@@ -1013,7 +1011,7 @@ CREATE TABLE IF NOT EXISTS `visitas_by_date` (
   `data` varchar(30) NOT NULL,
   `visitas` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=72 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=73 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `visitas_by_date`
@@ -1090,7 +1088,8 @@ INSERT INTO `visitas_by_date` (`id`, `data`, `visitas`) VALUES
 (68, '04/06/2021', 0),
 (69, '05/06/2021', 0),
 (70, '06/06/2021', 0),
-(71, '07/06/2021', 0);
+(71, '07/06/2021', 0),
+(72, '26/06/2022', 0);
 
 -- --------------------------------------------------------
 
@@ -1104,7 +1103,7 @@ CREATE TABLE IF NOT EXISTS `visitas_by_mes` (
   `mes` varchar(20) NOT NULL,
   `visitas` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `visitas_by_mes`
@@ -1119,7 +1118,8 @@ INSERT INTO `visitas_by_mes` (`id`, `mes`, `visitas`) VALUES
 (10, 'março/2021', 112),
 (11, 'abril/2021', 0),
 (12, 'maio/2021', 0),
-(13, 'junho/2021', 0);
+(13, 'junho/2021', 0),
+(14, 'junho/2022', 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

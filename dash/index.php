@@ -24,8 +24,10 @@
             $type_user = $user['type_user'];
             $user_Img = $user['img'];
 
-            if($type_user == 'Admnistrador'){
-            include 'assets/include/load/dash.php';  
+ 
+
+            if($type_user === 'admin'){
+              include 'assets/include/load/dash.php';  
             } else if($type_user == 'Colaborador'){
                 header("Location: ./account");
             }

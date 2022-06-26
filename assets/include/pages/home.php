@@ -1,13 +1,7 @@
 <?php
-include 'assets/include/pages/assets/css_meta.php';
-
+  include 'assets/include/pages/assets/css_meta.php';
 ?>
 
-<!-- <pre>
-  <?php
-  var_dump($name_meta)
-  ?>
-</pre> -->
 <body>
 <div id="buttonMenuPaimon" class="buttonMenuPaimon slide_topbar"></div>
         <!-- <div class="menu_paimon_new"></div> -->

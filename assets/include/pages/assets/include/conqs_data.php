@@ -28,11 +28,11 @@
                                     <h2>'.$data_conqs['objetivo'].'</h2>
                                 </div>
                             </div>
-                            <div class="cardRight-L_gems">
+                            <!-- <div class="cardRight-L_gems">
                                 <div class="cardRight-L_carGems">
                                     <span>'.$data_conqs['gems'].'</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="cardRight-R">
                             <div id="'.$data_conqs['id_url'].'" class="cardRight-R_button">Assistir</div>

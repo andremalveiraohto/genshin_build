@@ -15,9 +15,9 @@
     <link rel="shortcut icon" href="assets/include/pages/assets/img/icon_conquista.svg" type="image/x-icon">
 
 </head>
-<body class="fadeIn">
+<body class="fadeIn" >
     <div id="loading"><div class="box"><div class="spinner"></div></div></div>
-    <div class="blur">
+    <div class="bg blur" style="background-image: url(<?php echo$name_meta[14]['text'] ?>);">
         <div class="teiner">
             <div class="topBar slide_topbar">
                 <div class="topBarLeft">
