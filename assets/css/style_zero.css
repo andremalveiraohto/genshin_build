@@ -1,0 +1,205 @@
+/*THEME INDEX ZERO*/
+
+
+/*------------------------*/
+
+.flex_jcenter_acenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.padding_0{
+    padding: 0!important;
+}
+
+.vertical-center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.slider_style_zero {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+    max-width: 1080px;
+}
+.slider_center {
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: overlay;
+    overflow: auto;
+}
+.slider_center{scrollbar-width: none !important; }
+.slider_center::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.card_pers {
+    transition: ease 0.1s;
+    position: relative;
+    margin: 10px;
+}
+
+.card_img{
+    width: 131px;
+    height: 159px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: ease 0.1s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+    color: var(--azul_escuro);
+    background: #ebe6dd;
+    border-radius: 5px;
+}
+.card_iconPersona {
+    position: absolute;
+    width: 100%;
+    height: 83%;
+    border-radius: 5px 5px 25px 0px;
+}
+.miniIconElement{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    left: 0;
+    margin: 2px;
+}
+.miniIconElement.Anemo{background-image: url(../../assets/img/IconElement/miniIcon_Anemo.png);}
+.miniIconElement.Cryo{background-image: url(../../assets/img/IconElement/miniIcon_Cryo.png);}
+.miniIconElement.Dendro{background-image: url(../../assets/img/IconElement/miniIcon_Dendro.png);}
+.miniIconElement.Electro{background-image: url(../../assets/img/IconElement/miniIcon_Electro.png);}
+.miniIconElement.Geo{background-image: url(../../assets/img/IconElement/miniIcon_Geo.png);}
+.miniIconElement.Hydro{background-image: url(../../assets/img/IconElement/miniIcon_Hydro.png);}
+.miniIconElement.Pyro{background-image: url(../../assets/img/IconElement/miniIcon_Pyro.png);}
+
+.card_img span {
+    position: absolute;
+    bottom: 0;
+    filter: blur(0.4px);
+    letter-spacing: -1px;
+}
+.card_border {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}  
+.card_border:hover {
+    border: solid 3px #fff;
+    border-radius: 6px;
+    transform: scale(1.03);
+}  
+
+
+
+
+.index a {
+    width: 80%;
+    height: 80%;
+    z-index: 1;
+}
+.index .stars_element{
+    position: absolute;
+    bottom: 75px;
+}
+.index .stars_element .element {
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    background-size: contain;
+}
+.index .stars .fa-star{
+    font-size:15px;
+    margin: 0 0px;
+}
+
+
+/*TAB MENU*/
+.tab-menu{
+    background: #0c0c0c14;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.tab-menu ul{
+	margin: 0;
+	padding: 0;
+}
+.tab-menu ul li{
+	list-style-type: none;
+	display: inline-block;
+    position: relative;
+}
+.tab-menu ul li .tab-name{
+	text-decoration: none;
+    color: #fff;
+    padding: 7px 15px;
+    font-size: 25px;
+    
+    color: var(--caramelo);
+}
+.tab-menu ul li .tab-name.active-a{
+    color: var(--caramelo);
+}
+
+.bottom_bar {
+    display: block;
+    width: 100%;
+    bottom: 0;
+    border-width: 0 0 4px;
+    border-style: solid;
+    border-color: var(--color_border_single_active);
+    -webkit-animation: ss_active 0.2s ease;
+    -moz-animation: ss_active 0.2s ease;
+    -o-animation: ss_active 0.2s ease;
+    animation: ss_active 0.2s ease;
+}
+
+.tab{
+    display: none;
+    opacity: 0;
+    padding: 15px 10px 0px 10px;
+    border-radius: 0px 5px 5px 5px;
+    transition: ease 0.4s;
+}
+.tab-active{
+	display: block; 
+    transition: ease 0.4s;
+}
+
+.tab-show{
+    opacity: 1;
+}
+
+.tab_card{
+    height: 600px;
+    min-height: 205px;
+    position: fixed;
+}
+
+.blur {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+#mondstadt {
+    background-image: url('../../assets/img/teyvat/mondstadt/bg_mondstadt.jpg');
+}
+#liyue {
+    background-image: url('../../assets/img/teyvat/liyue/bg_liyue.jpg');
+}

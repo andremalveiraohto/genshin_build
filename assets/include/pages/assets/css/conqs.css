@@ -1,0 +1,439 @@
+
+    :root{
+        --color-text: #d3bc8e;
+        --color-textSpan: #ebe4d7;
+
+        --color-bgCardLeft: #2f3a47;
+        --color-borderCardLeft: #4a4f56;
+
+        --color-bg: #f2ece6;
+        --color-bg-card: #f5f1eb;
+        --color-bg-cardRight: #ebe3d8;
+        --color-text-card-title: #555555;
+        --color-text-card-subtitle: #c7b29ff2;
+        --color-border: #e0d6cb;
+
+        --color-bg-button: #b85a49;
+        --color-bg-button_hover: #d06552;
+        --color-border-button: #a14e40;
+        --color-text-button: #f8efed;
+
+    }
+    .teiner {
+        max-width: 1900px;
+        margin: auto;
+        position: relative;
+    }
+
+body{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: font-design;
+    font-weight: normal;
+    letter-spacing: -1px;
+}
+.bg.topbg {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+}
+.topBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--top_bar_height);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.topBar h1 {
+    color: var(--color-text);
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin: 0 25px;
+
+}
+.topBarLeft, .topBarRight {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+.topBar .topBarLeft .iconConquista {
+    background-image: url(../img/icon_conquista.svg);
+    background-repeat: no-repeat;
+    width: 75px;
+    height: 75px;
+    background-size: cover;
+}
+
+.topBar .topBarRight .conqsTotal {
+    display: flex;
+    align-items: center;
+    margin-right: 45px;
+}
+.topBar .topBarRight .conqsTotal h1 {
+   margin: 0;
+}
+.topBar .topBarRight .conqsTotal span {
+    display: flex;
+    color: var(--color-textSpan);
+    align-items: center;
+    font-size: 23px;
+}
+
+.bodyTeiner {
+    height: 100vh;
+    width: 100%;
+    padding: 95px 10px 10px 10px;
+    display: grid;
+    grid-template-columns: 35% 1fr;
+}
+
+/*BODYLEFT*/
+.bodyTeiner .bodyLeft {
+    width: 100%;
+    margin: 15px 0px 0 0;
+    overflow: overlay;
+    padding: 0 20px 0px 35px;
+}
+.bodyTeiner .bodyLeft .cardLeft {
+    width: 100%;
+    height: 110px;
+    margin: 0px 0 8px auto;
+    border-radius: 2px;
+    background: var(--color-bgCardLeft);
+    padding: 3px;
+    transition: ease 0.1s!important;
+    position: relative;
+}
+.bodyTeiner .bodyLeft .cardLeft:hover {
+    transform: scale(1.02)!important;
+}
+.bodyTeiner .bodyLeft .cardLeft:active{
+    transform: scale(1)!important;
+}
+.bodyTeiner .bodyLeft .cardLeft .arrow{
+    display: none;
+    align-items: center;
+    left: -20px;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: auto;
+}
+
+
+.bodyTeiner .bodyLeft .cardLeft .arrow .fa-caret-rightt {
+    position: revert;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 9px solid #ffffff;
+}
+.bodyTeiner .bodyLeft .cardLeft .arrow .fa-caret-rightt::after {
+    content: '';
+    position: absolute;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 9px solid #ffffff;
+    top: -9px;
+    left: -9px;
+}
+
+.bodyTeiner .bodyLeft .cardLeft .cardLeftBorder {
+    border: solid 3px var(--color-borderCardLeft);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    position: relative;
+}
+.bodyTeiner .bodyLeft .cardLeft .cardLeftbg {
+    background-image: url(../img/bgcardLeft.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.01;
+    z-index: 0;
+}
+.bodyTeiner .bodyLeft .cardLeft .cardLeftimg {
+    background-image: url(../img/icons_conqs/iconcardLeft.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    margin-top: 8px;
+}
+
+.bodyTeiner .bodyLeft .cardLeft .cardLeftText {
+    margin: 10px 0px 0px 10px;
+    z-index: 1;
+}
+.bodyTeiner .bodyLeft .cardLeft .cardLeftText h1 {
+    color: var(--color-textSpan);
+    font-size: 25px;
+    margin: 0;
+}
+.bodyTeiner .bodyLeft .cardLeft .cardLeftText h2 {
+    color: var(--color-text);
+    font-size: 20px;
+}
+
+
+/*active cardleft*/
+
+#active .cardLeft {
+    background: #ece5d8;  
+    transform: scale(1.02)!important;
+}
+#active .cardLeftBorder {
+    border: solid 3px #d2ccc1;
+}
+#active .cardLeftbg {
+    opacity: 1.01;
+    -webkit-animation: cardLeftbg 0.4s ease;
+    -moz-animation: cardLeftbg 0.4s ease;
+    -o-animation: cardLeftbg 0.4s ease;
+    animation: cardLeftbg 0.4s ease;
+}
+#active .cardLeftText h1 { 
+    color: #495366;
+}
+
+@keyframes cardLeftbg {
+    0% { opacity: 0.01;}
+    100% { opacity: 1.01;}
+}
+@-webkit-keyframes cardLeftbg {
+    0% { opacity: 0.01;}
+    100% { opacity: 1.01;}
+}
+@-moz-keyframes cardLeftbg {
+    0% { opacity: 0.01;}
+    100% { opacity: 1.01;}
+}
+@-o-keyframes cardLeftbg {
+    0% { opacity: 0.01;}
+    100% { opacity: 1.01;}
+}
+
+#active .cardLeft .arrow{
+    display: flex;
+}
+
+
+
+/*scroll bodyLeft*/
+.bodyTeiner .bodyLeft::-webkit-scrollbar {
+    width: 6px;
+}
+.bodyTeiner .bodyLeft::-webkit-scrollbar-track { 
+    background: #454c5f; 
+    -webkit-border-radius: 10px; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 1px #333;
+}
+.bodyTeiner .bodyLeft::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #c0bcb7; 
+}
+
+
+
+
+/*BODYRIGHT*/
+.bodyTeiner .bodyRight {
+    width: 100%;
+    padding: 15px 50px 0px 30px;
+}
+.bodyTeiner .bodyRight .bodyRightTeiner {
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg);
+    border-radius: 5px;
+    float: left;
+    position: relative;
+}
+.bodyTeiner .bodyRight .bodyRightCard {
+    width: 100%;
+    height: 95%;
+    overflow: overlay;
+    padding: 0 20px 0px 35px;
+    position: absolute;
+    margin: 20px 0px 0px -7px;
+    z-index: 0;
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight {
+    width: 100%;
+    height: 115px;
+    margin: 0px 0 8px auto;
+    background: var(--color-bg-card);
+    border: solid 2px var(--color-border);
+    display: grid;
+    grid-template-columns: 1fr 155px;
+    transition: ease 0.1s;
+
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight:hover {
+    transform: scale(1.02)!important;
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-L{
+    display: grid;
+    grid-template-columns: 135px 1fr 110px;
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-L .cardRight-L_img1 {
+    background-image: url(../img/icons_conqs/simbol_1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-L .cardRight-L_img3 {
+    background-image: url(../img/icons_conqs/simbol_3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-L .cardRight-L_text {
+    display: flex;
+    align-items: center;
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-L .cardRight-L_text h1 {
+    color: var(--color-text-card-title);
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-L .cardRight-L_text h2 {
+    color: var(--color-text-card-subtitle);
+    font-size: 20px;
+    margin:0;
+}
+
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-L .cardRight-L_gems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-L .cardRight-L_carGems {
+    background-image: url(../img/primogems.png), url(../img/bg_primogems.png) ;
+    background-color: #eb8e49;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #333;
+    position: relative;
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-L .cardRight-L_carGems span {
+    width: 100%;
+    height: 17px;
+    background: #4f4f4fa1;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-R{
+    background: var(--color-bg-cardRight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-card);
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-R .cardRight-R_button {
+    background: var(--color-bg-button);
+    width: 125px;
+    height: 40px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 50px;
+    border: solid 2px var(--color-border-button);
+    color: var(--color-text-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease 0.2s;
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-R .cardRight-R_button:hover {
+    background: var(--color-bg-button_hover);
+}
+.bodyTeiner .bodyRight .bodyRightCard .cardRight .cardRight-R .cardRight-R_button:active {
+    background: #ea9788;
+    color: #a92f1a;
+    border: solid 2px #fa7761;
+}
+
+
+/*scroll bodyRight*/
+.bodyTeiner .bodyRight .bodyRightCard::-webkit-scrollbar {
+    width: 6px;
+}
+.bodyTeiner .bodyRight .bodyRightCard::-webkit-scrollbar-track { 
+    background: #d3ccc5; 
+    -webkit-border-radius: 10px;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 1px #333;
+}
+.bodyTeiner .bodyRight .bodyRightCard::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #fff; 
+}
+
+
+.ModalVideo { 
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -100;
+    opacity: 0;
+    transition: ease 0.3s;
+    background-color: rgb(0 0 0 / 50%);
+}
+.ModalVideo.show { 
+    z-index: 100;
+    opacity: 1;
+}
+.ModalVideo .bodyVideo {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ModalVideo .bodyVideo .topBar.overlay {
+    z-index: 999;
+    top:0;
+}
+.ModalVideo .bodyVideo .video {
+    width: 1200px;
+    height: 700px;
+    background: rgb(58, 58, 58);
+    z-index: 1;
+}
+.overlayCloseVideo {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: 220px 0 0 0;
+}
+
+
+.blur{
+    transition: ease 0.2s;
+}
+.blur.show{
+    filter: blur(2.5px);
+}

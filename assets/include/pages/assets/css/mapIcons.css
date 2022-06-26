@@ -1,0 +1,137 @@
+.point {
+    background-image: url(../img/point.png);
+}
+.markerSelected {
+    width: 66px;
+    height: 66px;
+    position: absolute;
+    background-image: url(../img/markerSelected.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-animation: active 0.04s ease-out;
+    transform: scale(1);
+}
+@-webkit-keyframes active {
+    0% {-webkit-transform: scale(1)}
+    50% {-webkit-transform: scale(0.8)}
+    100% {-webkit-transform: scale(1)}
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+
+
+/*templateMarker*/
+.checkMarker::before {opacity: 0.5;}
+.checkMarker::after {opacity: 0.5;}
+
+.marcador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -39px;
+    margin-top: -63px;
+    width: 70px;
+    height: 70px;
+    display: none;
+}
+.marcador::before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/iconsMap/templatePoint.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+}
+.marcador::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    width: 46px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    z-index: -1;
+}
+.checkedMarker::before,
+.checkedMarker::after {
+    opacity: 0.5;
+}
+
+/*ICONS*/
+.teleporte, .estatua {
+    margin-left: -29px;
+    margin-top: -51px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+ /*iconsRedondos*/
+ .andrius,
+ .dominio,
+ .dragarto_primordial,
+ .hypo_anemo,
+ .hypo_electro,
+ .hypo_geo,
+ .oceanid,
+ .regisvine_cryo,
+ .regisvine_pyro,
+ .sabugueiro,
+ .templo
+
+{
+    margin-left: -29px;
+    margin-top: -26px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.estatua::before, 
+.teleporte::before, 
+.andrius::before,
+.dominio::before,
+.dragarto_primordial::before,
+.hypo_anemo::before,
+.hypo_electro::before,
+.hypo_geo::before,
+.oceanid::before,
+.regisvine_cryo::before,
+.regisvine_pyro::before,
+.sabugueiro::before,
+.templo::before
+
+{display: none;}
+
+    /*50x50 individual*/
+.teleporte {background-image: url(../img/iconsMap/teleporte.png);}
+.estatua {background-image: url(../img/iconsMap/estatua.png);}
+.andrius {background-image: url(../img/iconsMap/andrius.png);}
+.dominio {background-image: url(../img/iconsMap/dominio.png);}
+.dragarto_primordial {background-image: url(../img/iconsMap/dragarto_primordial.png);}
+.hypo_anemo {background-image: url(../img/iconsMap/hypo_anemo.png);}
+.hypo_electro {background-image: url(../img/iconsMap/hypo_electro.png);}
+.hypo_geo {background-image: url(../img/iconsMap/hypo_geo.png);}
+.oceanid {background-image: url(../img/iconsMap/oceanid.png);}
+.regisvine_cryo {background-image: url(../img/iconsMap/regisvine_cryo.png);}
+.regisvine_pyro {background-image: url(../img/iconsMap/regisvine_pyro.png);}
+.sabugueiro {background-image: url(../img/iconsMap/sabugueiro.png);}
+.templo {background-image: url(../img/iconsMap/templo.png);}
+
+
+
+
+
+
+    /*50x50 com template*/
+.santuario_anemo::after {background-image: url(../img/iconsMap/santuario_anemo.png);}
+.santuario_geo::after {background-image: url(../img/iconsMap/santuario_geo.png);}
+.desafio::after {background-image: url(../img/iconsMap/desafio.png);}
+.oculos_anemo::after { background-image: url(../img/iconsMap/oculos_anemo.png);}
+ 
